@@ -27,6 +27,6 @@ jobs:
         run: |
           gcloud firebase test android run \
             --type robo \
-            --app app.apk \
+            --app ./app.apk \
             --device model=SmallPhone.arm,version=34,locale=en,orientation=portrait \
             --timeout 60s
