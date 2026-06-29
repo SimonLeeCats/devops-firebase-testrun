@@ -21,12 +21,12 @@ jobs:
       # Step 3: Setup Google Cloud CLI tools inside the GitHub Runner
       - name: Set up Cloud SDK
         uses: google-github-actions/setup-gcloud@v2
-
+        
       # Step 4: Instruct Firebase to run an automated Robo Test on our APK
       - name: Run Firebase Robo Test
         run: |
           gcloud firebase test android run \
             --type robo \
             --app app.apk \
-            --device model=NexusLowRes,version=30,locale=en,orientation=portrait \
+            --device model=SmallPhone.arm,version=34,locale=en,orientation=portrait \
             --timeout 60s
